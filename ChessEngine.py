@@ -1,24 +1,12 @@
-# Clean Chess Engine
+"""
+Stores the information about state of game. Also valid moves for curr states. Keeps track of moves.
+"""
 
-A chess engine, using python.
-
-# Pieces
-* W white
-* B black
-* Pawn
-* Rook
-* Knight
-* Bishop
-* King
-* Queen
-
-# States
-* Can Castle
-* En Passant
-* Base
-
-# Board
-
+class GameState():
+  def __init__(self):
+    #Board 8x8 2d list, 2 char each element, b or w then peice type Q,K,B ect..
+    #two dash "--" means empty space.
+    self.Board =[
       ["bR", "bN", "bB", "bQ", "bK", "bB", "bN", "bR"],
       ["bP", "bP", "bP", "bP", "bP", "bP", "bP", "bP"],
       ["--", "--", "--", "--", "--", "--", "--", "--"],
@@ -27,4 +15,5 @@ A chess engine, using python.
       ["--", "--", "--", "--", "--", "--", "--", "--"],
       ["wP", "wP", "wP", "wP", "wP", "wP", "wP", "wP"],
       ["wR", "wN", "wB", "wQ", "wK", "wB", "wN", "wR"],]
-
+    self.whiteMove = True
+    self.moveLog = []
